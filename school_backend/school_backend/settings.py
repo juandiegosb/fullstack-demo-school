@@ -134,6 +134,11 @@ REST_FRAMEWORK = {
     ),
 }
 
+REST_FRAMEWORK.update({
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+})
+
 # CORS settings - Permitir todo para desarrollo académico
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
